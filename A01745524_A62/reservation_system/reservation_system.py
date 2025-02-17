@@ -38,7 +38,8 @@ class Hotels:
     @staticmethod
     def create_hotel(uuid):
         """
-        Creates instance of hotel, appends it to hotel list and returns a unique id
+        Creates instance of hotel, appends it to hotel list
+        and returns a unique id
         :return:
         """
         hotel_id = uuid
@@ -181,14 +182,14 @@ class Reservation:
         Carries out hotel reservation by hotel id and customer id
         :return:
         """
-        Hotels.reserve_hotel_room(self.hotel_id,self.customer_id)
+        Hotels.reserve_hotel_room(self.hotel_id, self.customer_id)
 
     def cancel_hotel_reservation(self):
         """
         Cancels hotel reservation by hotel id and customer id
         :return:
         """
-        Hotels.cancel_hotel_reservation(self.hotel_id,self.customer_id)
+        Hotels.cancel_hotel_reservation(self.hotel_id, self.customer_id)
 
 
 def main(reservation_path: str):
@@ -209,7 +210,8 @@ def main(reservation_path: str):
             Hotels.delete_hotel(el["hotel_id"])
         elif el["type"] == "customer" and el["action"] == "creation":
             Customers.create_customer(el["customer_id"])
-            Customers.modify_customer_info(el["customer_id"], el["customer_info"])
+            Customers.modify_customer_info(el["customer_id"],
+                                           el["customer_info"])
             Customers.display_customer_info(el["customer_id"])
         elif el["type"] == "customer" and el["action"] == "deletion":
             Customers.delete_customer(el["customer_id"])
