@@ -1,0 +1,54 @@
+[
+	{
+		"hotel_info": "Hotel 1 Creacion",
+		"type": "hotel",
+		"action": "creation",
+		"hotel_id": "hotel_1"
+	},
+	{
+		"customer_info": "Customer 1 Creación",
+		"type": "customer",
+		"action": "creation",
+		"customer_id": "customer_1"
+	},
+	{
+		"customer_info": "Customer 1 Reserva",
+		"type": "customer",
+		"action": "reservation",
+		"hotel_id": "hotel_1",
+		"customer_id": "customer_1"
+	},
+	{
+		"customer_info": "Customer 1 Delete",
+		"type": "customer",
+		"action": "deletion",
+		"customer_id": "customer_1"
+	},
+	{
+		"customer_info": "Customer 2 Creación",
+		"type": "customer",
+		"action": "creation",
+		"customer_id": "customer_2"
+	},
+	{
+		"customer_info": "Customer 2 Reserva",
+		"type": "customer",
+		"action": "reservation",
+		"hotel_id": "hotel_1",
+		"customer_id": "customer_2"
+	},
+	{
+		"customer_info": "Customer 2 Cancela Reserva",
+		"type": "customer",
+		"action": "cancel_reservation",
+		"hotel_id": "hotel_1",
+		"customer_id": "customer_2"
+	},
+	{
+		"customer_info": "Customer 2 Delete",
+		"type": "customer",
+		"action": "deletion",
+		"customer_id": "customer_2"
+	}
+
+  ]
