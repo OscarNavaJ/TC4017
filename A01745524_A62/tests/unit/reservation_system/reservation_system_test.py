@@ -3,6 +3,7 @@
 A01745524 - Oscar Nava Jiménez
 MNA - TC4017 A6.2
 """
+import coverage
 import unittest
 import reservation_system.reservation_system as ReservationSystem
 
@@ -81,6 +82,16 @@ class TestReservation(unittest.TestCase):
         self.assertTrue(self.hotels.hotels["test_hotel"].reservations["test_customer"])
         reservation.cancel_hotel_reservation()
         self.assertFalse(self.hotels.hotels["test_hotel"].reservations["test_customer"])
+
+class TestTC1Acceptation(unittest.TestCase):
+    """
+        Tests reservation system with hotel and customer objects for TC1
+    """
+    def test_TC1(self):
+        """
+        Tests TC1
+        """
+        ReservationSystem.main("tests/TC1/TC1.json")
 
 
 if __name__ == '__main__':
